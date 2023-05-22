@@ -1,3 +1,9 @@
+import base64
+
+from Crypto.Cipher import AES
+from random import randint
+import os
+
 
 from os import getcwd
 
@@ -78,7 +84,7 @@ def create_cipher_beacon():
 
 
 
-class ProjectPath:
+class Path:
 
     @staticmethod
     def get_project_path():
@@ -90,10 +96,10 @@ class ProjectPath:
 
     @staticmethod
     def add_absolute_path(relative_path):
-        return join(ProjectPath.get_project_path(), relative_path)
+           return Path.get_project_path()  + r_path
 
 
-project_path = ProjectPath()
+project_path = Path()
 print(join(project_path.get_project_path(), "resource"))
 if __name__ == '__main__':
     print(join(project_path.get_project_path(), "resource"))
