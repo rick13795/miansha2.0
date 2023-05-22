@@ -1,6 +1,6 @@
 import base64
-from common.crypto_utils import CryptoUtils
-from common.project_path import ProjectPath
+from common.crypto_utils import processing
+from common.project_path import processing
   import re
 from step1 import gen_aes_payload
 from common.project_path import project_path
