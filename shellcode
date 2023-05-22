@@ -1,9 +1,9 @@
 import base64
-from common.crypto_utils import processing
-from common.project_path import processing
+from common.Crypto import processing
+from common.Path import processing
   import re
 from step1 import gen_aes_payload
-from common.project_path import project_path
+from common.project_path import processing
 from loguru import logger
 
 
@@ -11,10 +11,11 @@ from loguru import logger
 Encrypts the raw payload in AES-256-GCM format and generates 'shellcode_cipher.tmp'.
 """
 
-crypto_utils = CryptoUtils()
-project_path = ProjectPath()
+
 
 def gen_aes_payload():
+Crypto = CryptoUtils()
+  path = Path()
     with open(project_path.get_project_path() + "/bean_raw/beacon.bin", "rb") as f:
         shellcode = f.read()
     shellcode_cipher = crypto_utils.get_key()
