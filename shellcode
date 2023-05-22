@@ -71,7 +71,7 @@ def run():
     t.join()
 
 
-def main():
+def l1():
     with open(project_path.add_abs_path("/step2.py"), "r+", encoding="utf-8") as f1:
         with open(project_path.add_abs_path("/resource/shellcode_cipher.tmp"), "rb") as f2:
             step2 = f1.read()
@@ -108,8 +108,6 @@ def gen_aes_payload():
 
 
 
-def create_cipher_beacon():
-    main()
 
 if __name__ == '__main__':
     gen_aes_payload()
